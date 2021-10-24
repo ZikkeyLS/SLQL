@@ -13,6 +13,7 @@ SOCL - string oriented query language (partially based on SQL standarts)
 
 ## Description
 ### TIL
+
 * **CREATE** 
 
   **Arguments:**
@@ -65,3 +66,25 @@ SOCL - string oriented query language (partially based on SQL standarts)
       Min(x) - minimum amount of symbols
   
       Max(y) - maximum amount of symbols
+      
+### EVL
+
+* **GET** 
+
+  **Arguments:**
+  
+    GET [*id*]
+    
+    GET [*ALL / First {index}/Last {index} / From {index}/Without {index}*]
+    
+    GET [*tags*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+  
+  **Examples:**
+  
+    ```[*tags*]=Last 20 From 3 Without 5
+    GET [*tags*] where age=5
+    ---------------------------------------
+    GET ALL
+    ---------------------------------------
+    GET ALL where banned=false
+    ```
