@@ -11,7 +11,8 @@ SOCL - string oriented query language (partially based on SQL standarts)
 * **CHANGE** – change element;
 * **DELETE** – remove element;
 
-## DESCRIPTION
+# Description
+## TIL
 * **CREATE** 
 
   **Arguments:**
@@ -44,4 +45,15 @@ SOCL - string oriented query language (partially based on SQL standarts)
     -------------------------------------------
     
     EDIT NAME TEST TEST1
+    ```
+    
+* **DELETE**
+
+  **Arguments:**
+  
+    DELETE [*TABLE_NAME*]  
+    
+  **Examples:**
+    ```
+    DELETE TEST
     ```
