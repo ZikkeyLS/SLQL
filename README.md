@@ -23,9 +23,9 @@ SOCL - string oriented query language (partially based on SQL standarts)
   
     ```[*TABLE_NAME*] = TEST
   
-    [*arguments*] = user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20))
+    [*new_arguments*] = user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20))
   
-    CREATE [*TABLE_NAME*] [*arguments*]
+    CREATE [*TABLE_NAME*] [*new_arguments*]
     ```
     
 * **EDIT**
@@ -57,3 +57,11 @@ SOCL - string oriented query language (partially based on SQL standarts)
     ```
     DELETE TEST
     ```
+
+  ### Parametres:
+  
+      U - unique. Means that only one element can be in table with a unique value.
+  
+      Min(x) - minimum amount of symbols
+  
+      Max(y) - maximum amount of symbols
