@@ -5,7 +5,7 @@ SOCL - string oriented query language (partially based on SQL standarts)
 * **CREATE** - create table;
 * **EDIT** - edit table;
 * **REMOVE** - remove table;
-### ERL – Element Redact Language
+### EVL – Element View Language
 * **GET** – get element;
 * **INSERT** – add element;
 * **CHANGE** – change element;
