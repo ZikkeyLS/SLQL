@@ -1,18 +1,18 @@
 # *SOQL*
 SOCL - string oriented query language (partially based on SQL standarts)
 
-## TIL – Table Interaction Language
+### TIL – Table Interaction Language
 * **CREATE** - create table;
 * **EDIT** - edit table;
 * **REMOVE** - remove table;
-## ERL – Element Redact Language
+### ERL – Element Redact Language
 * **GET** – get element;
 * **INSERT** – add element;
 * **CHANGE** – change element;
 * **DELETE** – remove element;
 
-# Description
-## TIL
+## Description
+### TIL
 * **CREATE** 
 
   **Arguments:**
