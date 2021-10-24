@@ -81,7 +81,8 @@ SOCL - string oriented query language (partially based on SQL standarts)
   
   **Examples:**
   
-    ```[*tags*]=Last 20 From 3 Without 5
+    ```
+    [*tags*]=Last 20 From 3 Without 5
     GET [*tags*] where age=5
     ---------------------------------------
     GET ALL
