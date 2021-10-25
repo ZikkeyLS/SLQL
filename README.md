@@ -116,9 +116,13 @@ SOCL - string oriented query language (partially based on SQL standarts)
   **Arguments:**
   
     CHANGE [*index*] with [*value*]
+    
     CHANGE with [*value*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    
     CHANGE parameter [*parameter_index*] from [*index*] with [*sub_value*]
+    
     CHANGE parameter [*parameter_index*] with [*sub_value*] where [*parameter_index_name*]=[*some_value*] (& [*name2*]=[*value2*] **etc...**)
+    
   **Examples:**
   
     ```
