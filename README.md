@@ -24,16 +24,16 @@ SOCL - string oriented query language (partially based on SQL standarts)
   
     ```[*TABLE_NAME*] = TEST
   
-    [*new_arguments*] = user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20))
+    [*new_value*] = user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20))
   
-    CREATE [*TABLE_NAME*] [*new_arguments*]
+    CREATE [*TABLE_NAME*] [*new_value*]
     ```
     
 * **EDIT**
 
   **Arguments:**
   
-    EDIT STRUCTURE [*TABLE_NAME*] [*arguments*]
+    EDIT STRUCTURE [*TABLE_NAME*] [*value*]
   
     EDIT NAME [*TABLE_NAME*] [*NEW_TABLE_NAME*]
   
@@ -41,7 +41,7 @@ SOCL - string oriented query language (partially based on SQL standarts)
     ```
     [*arguments*] = user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20), user_status))
     
-    EDIT STRUCTURE TEST [*arguments*]
+    EDIT STRUCTURE TEST [*value*]
     
     -------------------------------------------
     
@@ -78,6 +78,8 @@ SOCL - string oriented query language (partially based on SQL standarts)
     GET [*ALL / First {index}/Last {index} / From {index}/Without {index}*]
     
     GET [*tags*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    
+    GET LENGHT (where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)(unrequired))
   
   **Examples:**
   
@@ -88,6 +90,8 @@ SOCL - string oriented query language (partially based on SQL standarts)
     GET ALL
     ---------------------------------------
     GET ALL where banned=false
+    ---------------------------------------
+    GET LENGHT where banned=true
     ```
 
 * **INSERT**
@@ -96,7 +100,7 @@ SOCL - string oriented query language (partially based on SQL standarts)
   
     INSERT [*value*] [*place_index*(unrequired)]
     
-    INSERT [*value*] [*BEFORE/AFTER*] [FIRST/LAST/*place_index*] where [*name1*]=[*value1*]
+    INSERT [*value*] [*BEFORE/AFTER*] [FIRST/LAST/*place_index*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
   
   **Examples:**
   
@@ -105,4 +109,17 @@ SOCL - string oriented query language (partially based on SQL standarts)
     INSERT [*value*] 0
     ---------------------------------------
     INSERT [*value*] AFTER FIRST where user_name="Name"
+    ```
+    
+* **CHANGE**
+
+  **Arguments:**
+  
+    CHANGE [*index*] with [*value*]
+    CHANGE with [*value*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    CHANGE parameter [*parameter_index*] from [*index*] with [*sub_value*]
+    CHANGE parameter [*parameter_index*] with [*sub_value*] where [*parameter_index_name*]=[*some_value*] (& [*name2*]=[*value2*] **etc...**)
+  **Examples:**
+  
+    ```
     ```
