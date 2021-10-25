@@ -89,3 +89,20 @@ SOCL - string oriented query language (partially based on SQL standarts)
     ---------------------------------------
     GET ALL where banned=false
     ```
+
+* **INSERT**
+
+  **Arguments:**
+  
+    INSERT [*value*] [*place_index*(unrequired)]
+    
+    INSERT [*value*] [*BEFORE/AFTER*] [FIRST/LAST/*place_index*] where [*name1*]=[*value1*]
+  
+  **Examples:**
+  
+    ```
+    [*value*] = user_token="0" user_name="Test" user_password="0101"
+    INSERT [*value*] 0
+    ---------------------------------------
+    INSERT [*value*] AFTER FIRST where user_name="Name"
+    ```
