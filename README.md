@@ -36,12 +36,12 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   
   **Examples:**
     ```
-    EDIT NAME TEST TEST1
+      EDIT NAME TEST TEST1
     
-    EDIT STRUCTURE TEST1 (user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20)), user_status))
+      EDIT STRUCTURE TEST1 (user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20)), user_status))
     ```
     
-  ### Parametres:
+  **Parametres:**
     ```
       U - unique. Means that only one element can be in table with a unique value.
   
@@ -58,7 +58,7 @@ SLQL - string lightweight query language (partially based on SQL standarts)
     
   **Examples:**
     ```
-    DELETE TEST
+      DELETE TEST
     ```
       
 ### EVL
@@ -78,13 +78,13 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   **Examples:**
   
     ```
-    GET TEST1 Last 20 From 3 Without 5 where age="5"
+      GET TEST1 Last 20 From 3 Without 5 where age="5"
 
-    GET TEST2 ALL
+      GET TEST2 ALL
 
-    GET TEST3 ALL where banned="false"
+      GET TEST3 ALL where banned="false"
 
-    GET TEST4 LENGHT where banned="true"
+      GET TEST4 LENGHT where banned="true"
     ```
 
 * **INSERT**
@@ -93,14 +93,23 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   
     INSERT [*TABLE_NAME*] [*place_index*(unrequired)] [*value*] 
     
-    INSERT [*TABLE_NAME*] [*value*] [*BEFORE/AFTER*] [FIRST/LAST/*place_index*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    INSERT [*TABLE_NAME*] [*value*] [*BEFORE/AFTER*] [FIRST/LAST/*index*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
   
   **Examples:**
   
     ```
-    INSERT TEST 0 (user_token="0", user_name="Test", user_password="0101")
+      INSERT TEST 0 (user_token="0", user_name="Test", user_password="0101")
 
-    INSERT TEST2 (user_token="0", user_name="Test", user_password="0101") AFTER FIRST where user_name="Name"
+      INSERT TEST2 (user_token="0", user_name="Test", user_password="0101") AFTER FIRST where user_name="Name"
+    ```
+    
+  **Parametres:**
+    ```
+      BEFORE - sets value before finded element
+      AFTER - sets value after finded element
+      FIRST - sets value nearby first finded element
+      LAST - sets value nearby last finded element
+      *index* - sets value nearby indexed finded element
     ```
     
 * **CHANGE**
@@ -137,7 +146,7 @@ SLQL - string lightweight query language (partially based on SQL standarts)
     
   **Examples:**
     ```
-    REMOVE Test 0
+        REMOVE Test 0
     
-    REMOVE Test where user_name="Name"
+        REMOVE Test where user_name="Name"
     ```
