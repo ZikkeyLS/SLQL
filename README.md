@@ -22,11 +22,8 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   
   **Examples:**
   
-    ```[*TABLE_NAME*] = TEST
-  
-    [*new_value*] = user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20))
-  
-    CREATE [*TABLE_NAME*] [*new_value*]
+    ```
+    CREATE TEST user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20))
     ```
     
 * **EDIT**
@@ -39,13 +36,20 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   
   **Examples:**
     ```
-    [*arguments*] = user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20), user_status))
-    
-    EDIT STRUCTURE TEST [*value*]
-    
     EDIT NAME TEST TEST1
+    
+    EDIT STRUCTURE TEST1 user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20)), user_status)
     ```
     
+  ### Parametres:
+    ```
+      U - unique. Means that only one element can be in table with a unique value.
+  
+      Min(x) - minimum amount of symbols
+  
+      Max(y) - maximum amount of symbols
+    ```
+
 * **DELETE**
 
   **Arguments:**
@@ -56,14 +60,6 @@ SLQL - string lightweight query language (partially based on SQL standarts)
     ```
     DELETE TEST
     ```
-
-  ### Parametres:
-  
-      U - unique. Means that only one element can be in table with a unique value.
-  
-      Min(x) - minimum amount of symbols
-  
-      Max(y) - maximum amount of symbols
       
 ### EVL
 
