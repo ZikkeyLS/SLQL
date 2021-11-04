@@ -106,9 +106,13 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   **Parametres:**
     ```
       BEFORE - sets value before finded element
+      
       AFTER - sets value after finded element
+      
       FIRST - sets value nearby first finded element
+      
       LAST - sets value nearby last finded element
+      
       *index* - sets value nearby indexed finded element
     ```
     
