@@ -1,5 +1,5 @@
-# *SOQL*
-SOCL - string oriented query language (partially based on SQL standarts)
+# *SLQL*
+SLQL - string lightweight query language (partially based on SQL standarts)
 
 ### TIL – Table Interaction Language
 * **CREATE** - create table;
