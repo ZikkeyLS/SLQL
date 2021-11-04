@@ -126,4 +126,7 @@ SOCL - string oriented query language (partially based on SQL standarts)
   **Examples:**
   
     ```
+        CHANGE Test1 0 with user_token="0" user_name="Test" user_password="0101"
+        CHANGE Test1 with user_token="0" user_name="Test" user_password="01010" where user_name="Test"
+        CHANGE Test1 parameter 0 from 5 with user_token="0" user_name="Test" user_password="01010"
     ```
