@@ -78,8 +78,7 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   **Examples:**
   
     ```
-    [*tags*]=Last 20 From 3 Without 5
-    GET TEST1 [*tags*] where age="5"
+    GET TEST1 Last 20 From 3 Without 5 where age="5"
 
     GET TEST2 ALL
 
