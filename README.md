@@ -79,30 +79,29 @@ SLQL - string lightweight query language (partially based on SQL standarts)
   
     ```
     [*tags*]=Last 20 From 3 Without 5
-    GET TEST1 [*tags*] where age=5
+    GET TEST1 [*tags*] where age="5"
 
     GET TEST2 ALL
 
-    GET TEST3 ALL where banned=false
+    GET TEST3 ALL where banned="false"
 
-    GET TEST4 LENGHT where banned=true
+    GET TEST4 LENGHT where banned="true"
     ```
 
 * **INSERT**
 
   **Arguments:**
   
-    INSERT [*TABLE_NAME*] [*value*] [*place_index*(unrequired)]
+    INSERT [*TABLE_NAME*] [*place_index*(unrequired)] [*value*] 
     
     INSERT [*TABLE_NAME*] [*value*] [*BEFORE/AFTER*] [FIRST/LAST/*place_index*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
   
   **Examples:**
   
     ```
-    [*value*] = user_token="0" user_name="Test" user_password="0101"
-    INSERT TEST [*value*] 0
+    INSERT TEST 0 user_token="0" user_name="Test" user_password="0101" 
 
-    INSERT TEST2 [*value*] AFTER FIRST where user_name="Name"
+    INSERT TEST2 user_token="0" user_name="Test" user_password="0101" AFTER FIRST where user_name="Name"
     ```
     
 * **CHANGE**
@@ -141,5 +140,5 @@ SLQL - string lightweight query language (partially based on SQL standarts)
     ```
     REMOVE Test 0
     
-    REMOVE Test where user_name="someName"
+    REMOVE Test where user_name="Name"
     ```
