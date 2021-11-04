@@ -43,8 +43,6 @@ SOCL - string oriented query language (partially based on SQL standarts)
     
     EDIT STRUCTURE TEST [*value*]
     
-    -------------------------------------------
-    
     EDIT NAME TEST TEST1
     ```
     
@@ -86,11 +84,11 @@ SOCL - string oriented query language (partially based on SQL standarts)
     ```
     [*tags*]=Last 20 From 3 Without 5
     GET TEST1 [*tags*] where age=5
-    ---------------------------------------
+
     GET TEST2 ALL
-    ---------------------------------------
+
     GET TEST3 ALL where banned=false
-    ---------------------------------------
+
     GET TEST4 LENGHT where banned=true
     ```
 
@@ -107,7 +105,7 @@ SOCL - string oriented query language (partially based on SQL standarts)
     ```
     [*value*] = user_token="0" user_name="Test" user_password="0101"
     INSERT TEST [*value*] 0
-    ---------------------------------------
+
     INSERT TEST2 [*value*] AFTER FIRST where user_name="Name"
     ```
     
