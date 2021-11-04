@@ -4,12 +4,12 @@ SOCL - string oriented query language (partially based on SQL standarts)
 ### TIL – Table Interaction Language
 * **CREATE** - create table;
 * **EDIT** - edit table;
-* **REMOVE** - remove table;
+* **DELETE** - remove table;
 ### EVL – Element View Language
 * **GET** – get element;
 * **INSERT** – add element;
 * **CHANGE** – change element;
-* **DELETE** – remove element;
+* **REMOVE** – remove element;
 
 ## Description
 ### TIL
@@ -117,7 +117,7 @@ SOCL - string oriented query language (partially based on SQL standarts)
     
     CHANGE [*TABLE_NAME*] with [*value*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
     
-    CHANGE [*TABLE_NAME*] parameter [*parameter_index*] from [*index*] with [*sub_value*]
+    CHANGE [*TABLE_NAME*] [*index*] parameter [*parameter_index*] with [*sub_value*]
     
     CHANGE [*TABLE_NAME*] parameter [*parameter_index*] with [*sub_value*] where [*parameter_index_name*]=[*some_value*] (& [*name2*]=[*value2*] **etc...**)
     
@@ -125,6 +125,25 @@ SOCL - string oriented query language (partially based on SQL standarts)
   
     ```
         CHANGE Test1 0 with user_token="0" user_name="Test" user_password="0101"
+        
         CHANGE Test1 with user_token="0" user_name="Test" user_password="01010" where user_name="Test"
-        CHANGE Test1 parameter 0 from 5 with user_token="0" user_name="Test" user_password="01010"
+        
+        CHANGE Test1 5 parameter 0 with user_token="0"
+        
+        CHANGE Test1 parameter 0 with user_name="" where user_name="Name"
+    ```
+    
+* **REMOVE**
+
+  **Arguments:**
+  
+    REMOVE [*TABLE_NAME*] [*index*]
+    
+    REMOVE [*TABLE_NAME*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    
+  **Examples:**
+    ```
+    REMOVE Test 0
+    
+    REMOVE Test where user_name="someName"
     ```
