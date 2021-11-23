@@ -1,5 +1,6 @@
 # *SLQL*
 SLQL - string lightweight query language (partially based on SQL standarts)
+Linked: SLDB - https://github.com/ZikkeyLS/SLDB
 
 ### TIL – Table Interaction Language
 * **CREATE** - create table;
