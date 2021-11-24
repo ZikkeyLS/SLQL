@@ -25,7 +25,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   **Examples:**
   
     ```
-    CREATE TEST [user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20))]
+    CREATE TEST (user_token(U) | user_name(U, Min(4), Max(16)) | user_password(Min(6), Max(20))))
     ```
     
 * **EDIT**
@@ -40,7 +40,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
     ```
       EDIT NAME TEST TEST1
     
-      EDIT STRUCTURE TEST1 [user_token(U), user_name(U, Min(4), Max(16)), user_password(Min(6), Max(20)), user_status]
+      EDIT STRUCTURE TEST1 (user_token(U) | user_name(U, Min(4), Max(16)) | user_password(Min(6), Max(20)) | user_status)
     ```
     
   **Parametres:**
@@ -100,9 +100,9 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   **Examples:**
   
     ```
-      INSERT TEST 0 [user_token="0", user_name="Test", user_password="0101"]
+      INSERT TEST 0 (user_token="0" | user_name="Test" | user_password="0101")
 
-      INSERT TEST2 [user_token="0", user_name="Test", user_password="0101"] AFTER FIRST where user_name="Name"
+      INSERT TEST2 (user_token="0" | user_name="Test" | user_password="0101") AFTER FIRST where user_name="Name"
     ```
     
   **Parametres:**
@@ -133,9 +133,9 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   **Examples:**
   
     ```
-        CHANGE Test1 0 with [user_token="0", user_name="Test", user_password="0101"]
+        CHANGE Test1 0 with (user_token="0" | user_name="Test" | user_password="0101")
         
-        CHANGE Test1 with [user_token="0", user_name="Test", user_password="01010"] where user_name="Test"
+        CHANGE Test1 with (user_token="0" | user_name="Test" | user_password="01010") where user_name="Test"
         
         CHANGE Test1 5 parameter 0 with user_token="0"
         
