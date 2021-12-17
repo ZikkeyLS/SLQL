@@ -25,7 +25,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   **Examples:**
   
     ```
-    CREATE TEST (user_token(U) | user_name(U, Min(4), Max(16)) | user_password(Min(6), Max(20))))
+    CREATE TEST (user_token(U) | user_name(U, Min(4), Max(16)) | user_password(Min(6), Max(20)))
     ```
     
 * **EDIT**
