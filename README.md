@@ -71,20 +71,20 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   
     GET [*TABLE_NAME*] [*id*]
     
-    GET [*TABLE_NAME*] [*ALL / First {index}/Last {index} / From {index}/Without {index}*]
-    
-    GET [*TABLE_NAME*] [*tags*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    GET [*TABLE_NAME*] [*ALL / First {index} / Last {index}*] (where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)(unrequired))
     
     GET [*TABLE_NAME*] LENGHT (where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)(unrequired))
   
   **Examples:**
   
     ```
-    GET TEST1 Last 20 From 3 Without 5 where age="5"
+    GET TEST1 10
 
     GET TEST2 ALL
 
     GET TEST3 ALL where banned="false"
+    
+    GET TEST3 First 10 where status="user" username="Aleksey"
 
     GET TEST4 LENGHT where banned="true"
     ```
@@ -93,29 +93,12 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
 
   **Arguments:**
   
-    INSERT [*TABLE_NAME*] [*place_index*(unrequired)] [*value*] 
-    
-    INSERT [*TABLE_NAME*] [*value*] [*BEFORE/AFTER*] [FIRST/LAST/*index*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    INSERT [*TABLE_NAME*] [*value*]
   
   **Examples:**
   
     ```
-    INSERT TEST 0 (user_token="0" | user_name="Test" | user_password="0101")
-
-    INSERT TEST2 (user_token="0" | user_name="Test" | user_password="0101") AFTER FIRST where user_name="Name"
-    ```
-    
-  **Parametres:**
-    ```
-    BEFORE - sets value before finded element
-      
-    AFTER - sets value after finded element
-      
-    FIRST - sets value nearby first finded element
-      
-    LAST - sets value nearby last finded element
-      
-    *index* - sets value nearby indexed finded element
+    INSERT TEST (user_token="0" | user_name="Test" | user_password="0101")
     ```
     
 * **CHANGE**
