@@ -98,7 +98,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   **Examples:**
   
     ```
-    INSERT TEST (user_token="0" | user_name="Test" | user_password="0101")
+    INSERT TEST (0 | "Test" | "0101")
     ```
     
 * **CHANGE**
