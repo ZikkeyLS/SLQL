@@ -71,7 +71,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   
     GET [*TABLE_NAME*] [*id*]
     
-    GET [*TABLE_NAME*] [*ALL / First {index} / Last {index}*] (where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)(unrequired))
+    GET [*TABLE_NAME*] [*ALL / First {index} / Last {index}*] (where [*name1*]=[*value1*] ( [*name2*]=[*value2*] **etc...**)(unrequired))
     
     GET [*TABLE_NAME*] LENGHT (where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)(unrequired))
   
@@ -107,7 +107,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   
     CHANGE [*TABLE_NAME*] [*index*] with [*value*]
     
-    CHANGE [*TABLE_NAME*] with [*value*] where [*name1*]=[*value1*] (& [*name2*]=[*value2*] **etc...**)
+    CHANGE [*TABLE_NAME*] with [*value*] where [*name1*]=[*value1*] ( [*name2*]=[*value2*] **etc...**)
     
     CHANGE [*TABLE_NAME*] [*index*] parameter [*parameter_index*] with [*sub_value*]
     
