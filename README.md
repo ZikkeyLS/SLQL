@@ -107,22 +107,20 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   
     CHANGE [*TABLE_NAME*] [*index*] with [*value*]
     
-    CHANGE [*TABLE_NAME*] with [*value*] where [*name1*]=[*value1*] ( [*name2*]=[*value2*] **etc...**)
+    CHANGE [*TABLE_NAME*] parameter([*parameter_index*]) where [*parameter_index_name*]=[*some_value*] (& [*name2*]=[*value2*] **etc...**) with [*sub_value*]
     
-    CHANGE [*TABLE_NAME*] [*index*] parameter [*parameter_index*] with [*sub_value*]
-    
-    CHANGE [*TABLE_NAME*] parameter [*parameter_index*] with [*sub_value*] where [*parameter_index_name*]=[*some_value*] (& [*name2*]=[*value2*] **etc...**)
+    CHANGE [*TABLE_NAME*] where [*name1*]=[*value1*] ( [*name2*]=[*value2*] **etc...**) with [*value*]
     
   **Examples:**
   
     ```
     CHANGE Test1 0 with (user_token="0" | user_name="Test" | user_password="0101")
-        
-    CHANGE Test1 with (user_token="0" | user_name="Test" | user_password="01010") where user_name="Test"
-        
-    CHANGE Test1 5 parameter 0 with user_token="0"
-        
-    CHANGE Test1 parameter 0 with user_name="" where user_name="Name"
+    
+    CHANGE Test1 5 parameter(0) with user_token="0"
+    
+    CHANGE Test1 parameter(0) where user_name="Name" with user_name=""
+    
+    CHANGE Test1 where user_name="Test" with (user_token="0" | user_name="Test" | user_password="01010") 
     ```
     
 * **REMOVE**
