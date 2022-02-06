@@ -116,9 +116,9 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
     ```
     CHANGE Test1 1 with (user_token="1" | user_name="Test" | user_password="0101")
     
-    CHANGE Test1 5 parameter(1) with user_token="1"
+    CHANGE Test1 5 with user_token="1"
     
-    CHANGE Test1 parameter(1) where user_name="Name" with user_name=""
+    CHANGE Test1 where user_name="Name" with user_name=""
     
     CHANGE Test1 where user_name="Test" with (user_token="1" | user_name="Test" | user_password="01010") 
     ```
