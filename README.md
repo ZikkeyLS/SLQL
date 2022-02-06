@@ -98,7 +98,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   **Examples:**
   
     ```
-    INSERT TEST (0 | "Test" | "0101")
+    INSERT TEST (1 | "Test" | "0101")
     ```
     
 * **CHANGE**
@@ -114,13 +114,13 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   **Examples:**
   
     ```
-    CHANGE Test1 0 with (user_token="0" | user_name="Test" | user_password="0101")
+    CHANGE Test1 1 with (user_token="1" | user_name="Test" | user_password="0101")
     
-    CHANGE Test1 5 parameter(0) with user_token="0"
+    CHANGE Test1 5 parameter(1) with user_token="1"
     
-    CHANGE Test1 parameter(0) where user_name="Name" with user_name=""
+    CHANGE Test1 parameter(1) where user_name="Name" with user_name=""
     
-    CHANGE Test1 where user_name="Test" with (user_token="0" | user_name="Test" | user_password="01010") 
+    CHANGE Test1 where user_name="Test" with (user_token="1" | user_name="Test" | user_password="01010") 
     ```
     
 * **REMOVE**
@@ -133,7 +133,7 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
     
   **Examples:**
     ```
-    REMOVE Test 0
+    REMOVE Test 1
     
     REMOVE Test where user_name="Name"
     ```
