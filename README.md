@@ -38,9 +38,9 @@ Linked: SLDB - https://github.com/ZikkeyLS/SLDB
   
   **Examples:**
     ```
-    EDIT NAME TEST TEST1
+    EDIT TEST NAME TEST1
     
-    EDIT STRUCTURE TEST1 (user_token(U) | user_name(U, Min(4), Max(16)) | user_password(Min(6), Max(20)) | user_status)
+    EDIT TEST1 STRUCTURE (user_token(U) | user_name(U, Min(4), Max(16)) | user_password(Min(6), Max(20)) | user_status)
     ```
     
   **Parametres:**
